@@ -9,20 +9,16 @@ int     ispace(char c)
 
 void    fwod(char *s)
 {
-    int     i;
     int     n;
     int     k;
 
-    i = 0;
-    n = 1;
+    n = 0;
     k = 0;
-    while(s[i] && ispace(s[i++]) == 1)
+    while(ispace(s[k]) == 1)
         k++;
-    if (!s[i])
-        n = 0;
-    while(s[i] && !(ispace(s[i++])))
+    while(s[k + n] && !(ispace(s[k + n])))
         n++;
-    if (n != 0)
+    if (*(s + k) != '\0')
         write(1, s + k, n);
 }
 
