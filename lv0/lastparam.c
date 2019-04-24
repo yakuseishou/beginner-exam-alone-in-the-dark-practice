@@ -18,10 +18,8 @@ void	lastparam(char *s)
 
 	i = 0;
 	while (s[i])
-	{
-		write(1, &s[i], 1);
 		i++;
-	}
+	write(1, s, i);
 }
 
 int		main(int ac, char **av)
