@@ -25,13 +25,16 @@ char	*ft_strcpy(char *s1, char *s2)
 }
 /* to test
 #include <stdio.h>
+#include <string.h>
 
 int		main()
 {
-	char s1[] = "world";
+	char s1[] = "hello world";
 	char s2[] = "hello";
 	printf("before %s\n", s1);
+	printf("%d\n", strcmp(s2, s1));
 	printf("after %s\n", ft_strcpy(s1, s2));
+	printf("%d\n", strcmp(s2, ft_strcpy(s1, s2)));
 	return (0);
 }
 */
