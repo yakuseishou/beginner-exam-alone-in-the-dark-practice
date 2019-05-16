@@ -1,14 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   search_and_replace.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kchen2 <kchen2@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/16 16:07:52 by kchen2            #+#    #+#             */
+/*   Updated: 2019/05/16 16:08:08 by kchen2           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
-
-int     ft_strlen(char *s)
-{
-    int     l;
-
-    l = 0;
-    while(s[l])
-        l++;
-    return (l);
-}
 
 char    isletter(char *s)
 {
@@ -33,7 +35,7 @@ void    snr(char *s, char a, char b)
             s[i] = b;
         i++;
     }
-    write(1, s, ft_strlen(s));
+    write(1, s, i);
 }
 
 int     main(int ac, char **av)
